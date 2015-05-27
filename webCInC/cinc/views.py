@@ -59,8 +59,8 @@ def oferta_educativa(request):
 	html = plantilla.render(Context())
 	return HttpResponse(html)
 
-def contacto(request):
-	plantilla = get_template('contacto.html')
+def acerca_de(request):
+	plantilla = get_template('acercade.html')
 	html = plantilla.render(Context())
 	return HttpResponse(html)
 

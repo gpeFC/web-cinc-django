@@ -5,6 +5,14 @@ body,header,nav,section,aside,article,footer,p{
 	font-size: 15px;
 }
 
+header div{
+	display: inline-block;
+}
+
+nav{
+	background: #F8F8F8;
+}
+
 li{
 	list-style: none;
 	text-decoration: none;
@@ -44,11 +52,43 @@ a:hover {
 	border: solid;
 }
 
-.barra{
+.sin-mp{
 	margin: 0;
 	padding: 0;
 }
 
 .rojo{
 	background: red;
+}
+
+.azul{
+	background: blue;
+}
+
+/* Moviles */
+@media (max-width: 384px){
+	.encabezado{
+		height: 100px;
+		margin-right: 5%;
+		margin-left: 5%;
+		padding: 0;
+	}
+	.encabezado div{
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+	}
+	.encabezado img{
+		width: 80px;
+		height: 80px;
+		margin: 0;
+		padding: 0;
+	}
+
+	.pie-pagina{
+		margin-right: 0;
+		margin-left: 0;
+		margin-bottom: 10px;
+		padding: 0;
+	}
 }
