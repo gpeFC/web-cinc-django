@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block titulo %} Administración {% endblock %}
+
+{% block contenido %}
+
+{% load staticfiles %}
+
+<!-- Cuerpo de pagina -->
+<div class="row margen-arriba">
+	<!-- Principal -->
+	<div class="col-md-12">
+		<h1>Administración</h1>
+		<img class="margen-arriba" src="{% static "img/publicacion.jpg" %}" alt="">
+	    <div class="destacados">
+	      <a href="/actas/"><h3>Actas</h3></a>
+	      <a href="#"><h3>Organigrama</h3></a>
+	      <a href="#"><h3>Reglamento</h3></a>
+	    </div>
+	</div>
+</div>
+
+{% endblock %}

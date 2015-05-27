@@ -1,0 +1,54 @@
+body,header,nav,section,aside,article,p,a,h1,h2,h3,h4,h5{
+	color: black;
+}
+body,header,nav,section,aside,article,footer,p{
+	font-size: 15px;
+}
+
+li{
+	list-style: none;
+	text-decoration: none;
+}
+
+a{
+	font-size: 16px;
+}
+a:link {
+    color: black;
+    background-color:transparent;
+    text-decoration:none;
+}
+a:hover {
+	color: black;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+.fuente-media{
+	font-size: 18px;
+}
+
+.fondo-suave{
+	background: #BABEB6;
+}
+
+.margen-arriba{
+	margin-top: 20px;
+}
+
+.margen-doble{
+	margin-top: 40px;
+}
+
+.menu{
+	border: solid;
+}
+
+.barra{
+	margin: 0;
+	padding: 0;
+}
+
+.rojo{
+	background: red;
+}

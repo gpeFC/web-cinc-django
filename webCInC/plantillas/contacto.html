@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block titulo %} CInC - UAEM {% endblock %}
+
+{% block contenido %}
+
+{% load staticfiles %}
+
+<!-- Cuerpo de pagina -->
+<div class="row margen-arriba">
+	<!-- Principal -->
+	<div class="col-md-4">
+		<h1>Contacto</h1>
+		<p class="margen-arriba">
+			<h4>Centro de Investigación en Ciencias - UAEM</h4>
+			<h4>Av. Universidad 1001, Col. Chamilpa</h4>
+			<h4>Cuernavaca Morelos, 62209</h4>
+			<h4>Teléfono: (777) 329 70 20</h4>
+			<h4>Fax: (777) 329 70 40</h4>
+		</p>
+	</div>
+	<div class="col-md-8">
+		<img class="margen-arriba" src="{% static "img/contacto.jpg" %}" alt="" width="100%">
+	</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+
+{% block titulo %} Centro de Investigación en Ciencias {% endblock %}
+
+{% block contenido %}
+
+{% load staticfiles %}
+<div class="row margen-arriba">
+      <div class="col-md-12">
+        <hr class="barra">
+      </div>
+    </div>
+    <!-- Sección: Destacados -->
+    <div class="row">
+      <section>
+        <article>
+          <div class="col-md-4">
+            <h2>Administración</h2>
+            <ol>
+              <li><a href="#">Actas</a></li>
+              <li><a href="#">Reglamento</a></li>
+              <li><a href="#">Organigrama</a></li>
+            </ol>
+          </div>
+        </article>
+        <article>
+          <div class="col-md-4">
+            <h2>Investigación</h2>
+            <ol>
+              <li><a href="#">Publicaciones</a></li>
+              <li><a href="#">Investigadores</a></li>
+              <li><a href="#">Líneas de Investigación</a></li>
+            </ol>
+          </div>
+        </article>
+        <article>
+          <div class="col-md-4">
+            <h2>Oferta Educativa</h2>
+            <ol>
+              <li><a href="#">Becas</a></li>
+              <li><a href="#">Posgrado en Ciencias</a></li>
+              <li><a href="#">Licenciatura en Ciencias</a></li>
+            </ol>
+          </div>
+        </article>
+      </section>
+    </div>
+    <div class="row margen-arriba">
+      <div class="col-md-12">
+        <hr class="barra">
+      </div>
+    </div>
+
+    <!-- Sección: Principales -->
+    <div class="row margen-arriba">
+      <section>
+        <article>
+          <div class="col-md-6 margen-arriba">
+            <a href="#"><img src="{% static "img/cinc.jpg" %}" alt="" width="100%"></a>
+          </div>
+          <div class="col-md-6 margen-arriba">
+            <h3>Acerca del CInC</h3>
+            <p class="margen-arriba">El 12 de diciembre de 2014 la antigua Facultad de Ciencias de la Universidad Autónoma del Estado de Morelos se convierte en dos centros: el Centro de Investigación en Ciencias (CInC) y el Centro de Investigación en Dinámica Celular. Estos dos centros, junto con el CIQ y el CIICAp forman el Instituto de Investigación en Ciencias Básicas y Aplicadas....</p>
+            <a href="#">Leer más...</a>
+          </div>
+        </article>
+      </section>
+    </div>
+    
+    <div class="row margen-doble">
+      <div class="col-md-12">
+        <hr class="barra">
+      </div>
+    </div>
+    <!-- Sección: Secundarios -->
+    <div class="row">
+      <aside>
+        <article>
+          <div class="col-md-4">
+            <h3>Actividades</h3>
+          </div>
+        </article>
+        <article>
+          <div class="col-md-4">
+            <h3>Avisos</h3>
+          </div>
+        </article>
+        <article>
+          <div class="col-md-4">
+            <h3>Links</h3>
+          <div>
+        </article>
+      </aside>
+    </div>
+    <div class="row margen-arriba">
+      <div class="col-md-12">
+        <hr class="barra">
+      </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block titulo %} CInC {% endblock %}
+
+{% block contenido %}
+
+{% load staticfiles %}
+
+<!-- Cuerpo de pagina -->
+<div class="row margen-arriba">
+	<!-- Principal -->
+	<div class="col-md-8 margen-arriba">
+		<img class="completo" src="{% static "img/cinc.jpg" %}" alt="" width="100%">
+	</div>
+	<div class="col-md-4 margen-arriba">
+		<h4 class="fuente-montse">Centro de Investigación en Ciencias - UAEM</h4>
+		<p class="margen-arriba">El 12 de diciembre de 2014 la antigua Facultad de Ciencias de la Universidad Autónoma del Estado de Morelos se convierte en dos centros: el Centro de Investigación en Ciencias (CInC) y el <a href="#">Centro de Investigación en Dinámica Celular</a> (CIDC). Estos dos centros, junto con el <a href="#">Centro de Investigaciones Químicas</a> (CIQ) y el <a href="#">Centro de Investigación en Ingeniería y Ciencias Aplicadas</a> (CIICAp) forman el <a href="#">Instituto de Investigación en Ciencias Básicas y Aplicadas</a>. El CInC congrega a 24 profesores investigadores de la Universidad Autónoma del Estado de Morelos que realizan investigación en las áreas de Física, Matemáticas y Computación. Los investigadores también apoyan el Posgrado en Ciencias y la Licenciatura en Ciencias.</p>
+	</div>
+	<div class="col-md-12">
+		<h2>Director:</h2>
+		<a href="#"><h4>Dr. Alejandro Ramirez Solís</h4></a>
+		<h3>Secretario:</h2>
+		<a href="#"><h4>Dr. Juan Manuel Rendón Mancha</h3></a>
+		<h3>Jefa de Enlace y Gestión:</h3>
+		<a href="#"><h4>C.P. Marta Lilina López Alarcon</h4></a>
+	</div>
+</div>
+
+{% endblock %}
