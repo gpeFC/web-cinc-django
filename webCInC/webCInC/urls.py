@@ -16,7 +16,8 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.conf import settings
 from django.contrib import admin
-from cinc.views import inicio, cinc, investigacion, investigadores, lineas_investigacion, publicaciones, administracion, actas, oferta_educativa, departamentos, contacto
+from cinc.views import inicio, cinc, investigacion, investigadores, lineas_investigacion, publicaciones
+from cinc.views import administracion, actas, oferta_educativa, departamentos, acerca_de
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
@@ -31,6 +32,6 @@ urlpatterns = [
     url(r'^actas/$', actas),
     url(r'^oferta-educativa/$', oferta_educativa),
     url(r'^departamentos/$', departamentos),
-    url(r'^contacto/$', contacto),
+    url(r'^acerca-de/$', acerca_de),
     url(r'^cargas/(?P<path>.*)$', 'django.views.static.serve', {'document_root':settings.MEDIA_ROOT}),
 ]

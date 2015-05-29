@@ -11,13 +11,15 @@
 <body>
 	<div class="container">
 		<!-- Sección: Encabezado -->
-		<div class="row margen-arriba">
+		<div class="row margen-arriba encabezado rojo">
 			<header>
-				<div class="col-md-8 margen-arriba">
-					<a href="/"><img src="{% static "img/logo_fc.jpg" %}" alt="" width="80%"></a>
-				</div>
-				<div class="col-md-4">
-					<img src="{% static "img/logo_uaem.jpg" %}" alt="" width="80%">
+				<div class="col-md-12">
+					<div class="logo-cinc">
+						<a href="/"><img src="{% static "img/logo_fc.jpg" %}" alt=""></a>
+					</div>
+					<div class="logo-secundario">
+						<img src="{% static "img/logo_uaem.jpg" %}" alt="">
+					</div>
 				</div>
 			</header>
 		</div>
@@ -33,9 +35,9 @@
 				        <li><a href="/cinc/">CInC</a></li>
 						<li><a href="/investigacion/">Investigación</a></li>
 						<li><a href="/publicaciones/">Publicaciones</a></li>
-						<li><a href="/administracion/">Administración</a></li>
-						<li><a href="/oferta-educativa/">Oferta Educativa</a></li>
 						<li><a href="/departamentos/">Departamentos</a></li>
+						<li><a href="/oferta-educativa/">Oferta Educativa</a></li>
+						<li><a href="/administracion/">Administración</a></li>
 						<li><a href="/acerca-de/">Acerca de</a></li>
 						<li><a href="https://www.facebook.com/pages/Centro-de-Investigaci%C3%B3n-en-Ciencias-CInC-UAEM/518893448249920?fref=ts" target ="_blank"><img src="{% static "img/icon_fb.png" %}" alt="" width="20px"></a></li>
 						<li><a href="https://twitter.com/CInC_UAEM" target ="_blank"><img src="{% static "img/icon_tw.png" %}" alt="" width="20px"></a></li>
@@ -49,10 +51,10 @@
 		{% block contenido %}{% endblock %}
 		
 		<!-- Sección: Pie de Página -->
-		<div class="row margen-arriba">
+		<div class="row margen-arriba pie-pagina ">
 			<div class="col-md-12 text-center margen-arriba fuente-media">
 				<footer>
-					<p>&copy; 2015 <strong>Centro de Investigación en Ciencias - UAEM</strong> | <a href="#">Contacto</a> | <a href="#">Ubicación</a></p>
+					<p>&copy; 2015 <strong>Centro de Investigación en Ciencias - UAEM</strong> | <a href="#">Ubicación y Contacto</a></p>
 				</footer>
 			</div>
 		</div>
