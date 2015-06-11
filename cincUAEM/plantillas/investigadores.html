@@ -1,0 +1,19 @@
+{% extends 'basebd.html' %}
+
+{% block titulo %} Investigadores {% endblock %}
+
+{% load staticfiles %}
+
+{% block area %}Investigadores{% endblock %}
+
+{% block computacion %}
+	<div class="margen-izquierdo-10-px">
+		{% for investigador in investigador %}
+			<li><a href="/investigador/{{investigador.nombre}}">{{investigador.nombre}}</a></li>
+		{% endfor %}
+	</div>
+{% endblock %}
+
+{% block fisica %}{% endblock %}
+
+{% block matematicas %}{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block titulo %} Administración {% endblock %}
+
+{% block contenido %}
+
+{% load staticfiles %}
+
+<section>
+	<div class="row">
+		<div class="col-md-12">
+			<h1>Administración</h1>
+		</div>
+	</div>
+	<div class="row">
+		<article>
+			<div class="col-md-7">
+				<img class="margen-arriba-15-px" src="{% static "img/administracion.jpg" %}" alt="" width="100%">
+			</div>
+			<div class="col-md-5">
+			<div class="margen-arriba-2-em">
+				<a href="/actas/"><h3>Actas</h3></a>
+				<a href="#"><h3>Organigrama</h3></a>
+				<a href="#"><h3>Reglamento</h3></a>
+			</div>
+			</div>
+		</article>
+	</div>
+</section>
+
+{% endblock %}

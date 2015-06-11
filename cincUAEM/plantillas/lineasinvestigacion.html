@@ -1,0 +1,36 @@
+{% extends 'basebd.html' %}
+
+{% block titulo %} Líneas de Investigación {% endblock %}
+
+{% load staticfiles %}
+
+{% block area %}Líneas de Investigación{% endblock %}
+
+{% block computacion %}
+	<div class="margen-izquierdo-10-px">
+		<li><a href="#">Robótica Cognitiva y Evolutiva</a></li>
+		<li><a href="#">Optimización y Algoritmica</a></li>
+		<li><a href="#">Sistemas Inteligentes de Percepción</a></li>
+		<li><a href="#">Visión por Computadora y Procesamiento de Imágenes</a></li>
+		<li><a href="#">Estadística Computacional Vía Simulación Monte Carlo</a></li>
+	</div>
+{% endblock %}
+
+{% block fisica %}
+	<div class="margen-izquierdo-10-px">
+		<li><a href="#">Física Atómica Molecular</a></li>
+		<li><a href="#">Física del Estado Sólido</a></li>
+		<li><a href="#">Termodínamica Fuera del Equilibrio</a></li>
+		<li><a href="#">Sistemas Dínamicos</a></li>
+	</div>
+{% endblock %}
+
+{% block matematicas %}
+	<div class="margen-izquierdo-10-px">
+		<li><a href="#">Análisis Real, Complejo y Funcional</a></li>
+		<li><a href="#">Análisis Armónico y Ecuaciones Diferenciales Parciales</a></li>
+		<li><a href="#">Física Matemática</a></li>
+		<li><a href="#">Álgebra y Geometría</a></li>
+		<li><a href="#">Sistemas Dinámicos</a></li>
+	</div>
+{% endblock %}

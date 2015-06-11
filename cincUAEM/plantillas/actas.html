@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block titulo %} Actas {% endblock %}
+
+{% block contenido %}
+
+{% load staticfiles %}
+
+<section>
+	<div class="row">
+		<div class="col-md-12">
+			<h1>Actas</h1>
+			<img class="margen-arriba-15-px" src="{% static "img/publicacion.jpg" %}" alt="">
+		</div>
+		<article>
+			<div class="col-md-12">
+				<div class="margen-arriba-2-em">
+					<h3>Actas de Consejo Ténico</h3>
+					{% for acta in actas %}
+						<a href="{{acta.archivo_pdf.url}}" target="_blank"><h4 class="margen-izquierdo-10-px"> Acta de Consejo Técnico {{acta.numero}}</h4></a>
+					{% endfor %}
+				</div>
+			</div>
+		</article>
+	</div>
+</section>
+
+<!-- Cuerpo de pagina -->
+<div class="units-row margen-arriba">
+	<!-- Principal -->
+	<div class="unit-100">
+		
+		
+	</div>
+</div>
+
+{% endblock %}
