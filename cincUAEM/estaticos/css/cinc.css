@@ -1,6 +1,6 @@
 body{
 	color: black;
-	font-size: 1.5em;
+	font-size: 1.3em;
 }
 
 h1,h2,h3,h4,h5{
@@ -20,6 +20,10 @@ a{
 }
 
 .encabezado  div{
+	display: inline-block;
+}
+
+.titulares{
 	display: inline-block;
 }
 
@@ -56,4 +60,10 @@ a{
 
 .padding-10-px{
 	padding: 10px;
+}
+
+@media (max-width: 384px){
+	header div .encabezado img{
+		width: 90%;
+	}
 }
