@@ -9,11 +9,29 @@
 {% block computacion %}
 	<div class="margen-izquierdo-10-px">
 		{% for investigador in investigador %}
-			<li><a href="/investigador/{{investigador.nombre}}">{{investigador.nombre}}</a></li>
+			{% ifequal investigador.departamento 'Computación' %}
+				<li><a href="/investigador/{{investigador.nombre}}"><h5>{{investigador.nombre}}</h5></a></li>
+			{% endifequal %}
 		{% endfor %}
 	</div>
 {% endblock %}
 
-{% block fisica %}{% endblock %}
+{% block fisica %}
+	<div class="margen-izquierdo-10-px">
+		{% for investigador in investigador %}
+			{% ifequal investigador.departamento 'Física' %}
+				<li><a href="/investigador/{{investigador.nombre}}"><h5>{{investigador.nombre}}</h5></a></li>
+			{% endifequal %}
+		{% endfor %}
+	</div>
+{% endblock %}
 
-{% block matematicas %}{% endblock %}
+{% block matematicas %}
+	<div class="margen-izquierdo-10-px">
+		{% for investigador in investigador %}
+			{% ifequal investigador.departamento 'Matemáticas' %}
+				<li><a href="/investigador/{{investigador.nombre}}"><h5>{{investigador.nombre}}</h5></a></li>
+			{% endifequal %}
+		{% endfor %}
+	</div>
+{% endblock %}
