@@ -72,11 +72,6 @@ def oferta_educativa(request):
 	html = plantilla.render(Context())
 	return HttpResponse(html)
 
-def oferta_educativa_computacion(request):
-	plantilla = get_template('ofertaeducativacomputacion.html')
-	html = plantilla.render(Context())
-	return HttpResponse(html)
-
 def acerca_de(request):
 	plantilla = get_template('acercade.html')
 	html = plantilla.render(Context())

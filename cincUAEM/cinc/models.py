@@ -8,6 +8,9 @@ class Aviso(models.Model):
 	descripcion = models.CharField(max_length=500)
 	link = models.CharField(null=True, max_length=500)
 
+	def __unicode__(self):
+		return self.titulo
+
 class Actividad(models.Model):
 	titulo = models.CharField(max_length=50)
 	fecha = models.DateField()
@@ -16,10 +19,16 @@ class Actividad(models.Model):
 	link = models.CharField(null=True, max_length=500)
 	archivo_pdf = models.FileField(null=True, upload_to="archivosActividades")
 
+	def __unicode__(self):
+		return self.titulo
+
 class Link(models.Model):
 	titulo = models.CharField(max_length=50)
 	fecha = models.DateField()
 	link = models.CharField(null=True, max_length=500)
+
+	def __unicode__(self):
+		return self.titulo
 
 class Miscelaneo(models.Model):
 	titulo = models.CharField(max_length=50)
@@ -29,6 +38,9 @@ class Miscelaneo(models.Model):
 	link = models.CharField(null=True, max_length=500)
 	archivo_pdf = models.FileField(null=True, upload_to="archivosMiscelaneos")
 
+	def __unicode__(self):
+		return self.titulo
+
 class Evidencia(models.Model):
 	titulo = models.CharField(max_length=50)
 	fecha = models.DateField()
@@ -37,10 +49,16 @@ class Evidencia(models.Model):
 	link_video = models.CharField(null=True, max_length=500)
 	archivo_pdf = models.FileField(null=True, upload_to="archivosEvidencias")
 
+	def __unicode__(self):
+		return self.titulo
+
 class ActaConsejoTecnico(models.Model):
 	fecha = models.CharField(max_length=10,default="DD/MM/AAAA")
 	numero = models.IntegerField(null=True)
 	archivo_pdf = models.FileField(null=True, upload_to="actasConsejoTecnico")
+
+	def __unicode__(self):
+		return "Acta %s - %s" % (self.numero, self.fecha)
 
 class DatosGenerales(models.Model):
 	nombre = models.CharField(max_length=75)
@@ -50,6 +68,9 @@ class DatosGenerales(models.Model):
 	departamento = models.CharField(max_length=11)
 	email = models.EmailField(null=True)
 	foto = models.ImageField(null=True, upload_to="fotosInvestigadores")
+
+	def __unicode__(self):
+		return self.nombre
 
 class Publicacion(models.Model):
 	anio = models.CharField(max_length=4)
@@ -66,12 +87,19 @@ class Publicacion(models.Model):
 	doi = models.CharField(max_length=50)
 	archivo_pdf = models.FileField(null=True, upload_to="publicaciones")
 
+	def __unicode__(self):
+		return "%s - %s" % (self.titulo, self.anio)
+
 class Patente(models.Model):
+	titulo = models.CharField(null=True, max_length=150)
 	anio = models.CharField(max_length=4)
 	referencia = models.TextField()
 	pitc_s = models.TextField()
 	estatus = models.CharField(max_length=10)
 	archivo_pdf = models.FileField(null=True, upload_to="patentes")
+
+	def __unicode__(self):
+		return "%s - %s" % (self.titulo, self.anio)
 
 
 class SNI(models.Model):

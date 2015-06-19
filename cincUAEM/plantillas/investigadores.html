@@ -10,7 +10,7 @@
 	<div class="margen-izquierdo-10-px">
 		{% for investigador in investigador %}
 			{% ifequal investigador.departamento 'Computación' %}
-				<li><a href="/investigador/{{investigador.nombre}}"><h5>{{investigador.nombre}}</h5></a></li>
+				<li><h5><a href="/investigador/{{investigador.nombre}}">{{investigador.nombre}}</a></h5></li>
 			{% endifequal %}
 		{% endfor %}
 	</div>
@@ -20,7 +20,7 @@
 	<div class="margen-izquierdo-10-px">
 		{% for investigador in investigador %}
 			{% ifequal investigador.departamento 'Física' %}
-				<li><a href="/investigador/{{investigador.nombre}}"><h5>{{investigador.nombre}}</h5></a></li>
+				<li><h5><a href="/investigador/{{investigador.nombre}}">{{investigador.nombre}}</a></h5></li>
 			{% endifequal %}
 		{% endfor %}
 	</div>
@@ -30,7 +30,7 @@
 	<div class="margen-izquierdo-10-px">
 		{% for investigador in investigador %}
 			{% ifequal investigador.departamento 'Matemáticas' %}
-				<li><a href="/investigador/{{investigador.nombre}}"><h5>{{investigador.nombre}}</h5></a></li>
+				<li><h5><a href="/investigador/{{investigador.nombre}}">{{investigador.nombre}}</a></h5></li>
 			{% endifequal %}
 		{% endfor %}
 	</div>

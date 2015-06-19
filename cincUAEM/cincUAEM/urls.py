@@ -17,7 +17,7 @@ from django.conf.urls import include, url
 from django.conf import settings
 from django.contrib import admin
 from cinc.views import inicio, cinc, investigacion, investigadores, lineas_investigacion, publicaciones
-from cinc.views import administracion, actas, oferta_educativa, oferta_educativa_computacion, departamentos, laboratorios, acerca_de, investigador_datos
+from cinc.views import administracion, actas, oferta_educativa, departamentos, laboratorios, acerca_de, investigador_datos
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
@@ -32,7 +32,6 @@ urlpatterns = [
     url(r'^administracion/$', administracion),
     url(r'^actas/$', actas),
     url(r'^oferta-educativa/$', oferta_educativa),
-    url(r'^oferta-educativa/computacion/$', oferta_educativa_computacion),
     url(r'^departamentos/$', departamentos),
     url(r'^acerca-de/$', acerca_de),
     url(r'^cargas/(?P<path>.*)$', 'django.views.static.serve', {'document_root':settings.MEDIA_ROOT}),
