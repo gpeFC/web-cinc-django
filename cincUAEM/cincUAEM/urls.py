@@ -1,3 +1,5 @@
+# -*- coding:utf8 -*-
+
 """webCInC URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -17,7 +19,7 @@ from django.conf.urls import include, url
 from django.conf import settings
 from django.contrib import admin
 from cinc.views import inicio, cinc, investigacion, investigadores, lineas_investigacion, publicaciones
-from cinc.views import administracion, actas, oferta_educativa, departamentos, laboratorios, acerca_de, investigador_datos
+from cinc.views import administracion, actas, oferta_educativa, departamentos, laboratorios, acerca_de
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
@@ -26,7 +28,6 @@ urlpatterns = [
     url(r'^investigacion/$', investigacion),
     url(r'^laboratorios/$', laboratorios),
     url(r'^investigadores/$', investigadores),
-    url(r'^investigador/([a-zA-Z0-9])+$', investigador_datos),
     url(r'^lineas-investigacion/$', lineas_investigacion),
     url(r'^publicaciones/$', publicaciones),
     url(r'^administracion/$', administracion),

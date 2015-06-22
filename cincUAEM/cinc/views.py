@@ -10,15 +10,6 @@ from random import choice
 
 # Create your views here.
 
-def bdcinc(request):
-	plantilla = get_template('bdcinc.html')
-	html = plantilla.render(Context({'argumento':'Django'}))
-	return HttpResponse(html)
-
-def inicio2(request):
-	tesis = Tesis.objects.all()
-	return render_to_response('inicio.html', {'tesis':tesis}, context_instance=RequestContext(request))
-
 def inicio(request):
 	plantilla = get_template('index.html')
 	html = plantilla.render(Context())

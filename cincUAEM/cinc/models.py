@@ -1,3 +1,5 @@
+# -*- coding:utf8 -*-
+
 from django.db import models
 
 # Create your models here.
@@ -49,7 +51,7 @@ class ActaConsejoTecnico(models.Model):
 	def __unicode__(self):
 		return "Acta %s - %s" % (self.numero, self.fecha)
 
-class DatosGenerales(models.Model):
+class Investigador(models.Model):
 	nombre = models.CharField(max_length=75)
 	nivel = models.CharField(max_length=10)
 	definitivo = models.CharField(max_length=2)
@@ -67,8 +69,7 @@ class Publicacion(models.Model):
 	indizada_jcr = models.CharField(max_length=2)
 	con_alumnos = models.CharField(max_length=2)
 	titulo = models.CharField(max_length=150)
-	autores = models.TextField()
-	publicacion = models.CharField(max_length=8)
+	autores = models.ManyToManyField(Investigador)
 	volumen = models.IntegerField()
 	numero = models.IntegerField()
 	paginas = models.CharField(max_length=9)
@@ -83,7 +84,7 @@ class Patente(models.Model):
 	titulo = models.CharField(null=True, max_length=150)
 	anio = models.CharField(max_length=4)
 	referencia = models.TextField()
-	pitc_s = models.TextField()
+	pitcs = models.ManyToManyField(Investigador)
 	estatus = models.CharField(max_length=10)
 	archivo_pdf = models.FileField(null=True, upload_to="patentes")
 
@@ -92,11 +93,13 @@ class Patente(models.Model):
 
 
 class SNI(models.Model):
+	pitc = models.OneToOneField(Investigador, null=True)
 	nivel = models.CharField(max_length=3)
 	vigencia = models.CharField(max_length=9)
 	nombramiento_pdf = models.FileField(null=True, upload_to="sni")
 
 class SEI(models.Model):
+	pitc = models.OneToOneField(Investigador, null=True)
 	tiene = models.CharField(max_length=2)
 	archivo_pdf = models.FileField(null=True, upload_to="sei")
 
@@ -105,17 +108,20 @@ class PerfilDeseable(models.Model):
 	nombramiento_pdf = models.FileField(null=True, upload_to="perfilDeseable")
 
 class Tesis(models.Model):
+	pitcs = models.ManyToManyField(Investigador)
 	anio = models.CharField(max_length=4)
 	nivel = models.CharField(max_length=12)
 	archivo_pdf = models.FileField(null=True, upload_to="tesis")
 
-class DireccionEstancia(models.Model):
+class Estancia(models.Model):
+	invest = models.OneToOneField(Investigador)
 	tipo = models.CharField(max_length=12)
 	visitante = models.CharField(max_length=2)
 	duracion = models.CharField(max_length=9)
 	archivo_pdf = models.FileField(null=True, upload_to="direccionEstancia")
 
 class Premio(models.Model):
+	pitcs = models.ManyToManyField(Investigador)
 	anio = models.CharField(max_length=4)
 	descripcion = models.TextField()
 	comprobante_pdf = models.FileField(null=True, upload_to="premios")
