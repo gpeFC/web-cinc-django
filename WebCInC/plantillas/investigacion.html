@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block titulo %} CInC | Investigación {% endblock %}
+
+{% block contenido %}
+
+{% load staticfiles %}
+
+<section>
+	<article>
+		<div class="row">
+			<div class="col-md-12">
+				<h1>Investigación</h1>
+			</div>
+		</div>
+	</article>
+	<article>
+		<div class="row margen-arriba-15-px">
+			<div class="col-md-6">
+				<img src="{% static "img/investigacion.jpg" %}" alt="" width="100%">
+			</div>
+			<div class="col-md-6">
+				<div class="">
+					<h2><a href="/lineas-investigacion">Líneas de Investigación</a></h2>
+					<h2><a href="/publicaciones">Publicaciones</a></h2>
+					<h2><a href="/investigadores">Investigadores</a></h2>
+					<h2><a href="/laboratorios">Laboratorios</a></h2>
+				</div>
+			</div>
+		</div>
+	</article>
+</section>
+
+{% endblock %}
