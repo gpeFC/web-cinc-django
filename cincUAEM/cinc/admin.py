@@ -1,6 +1,6 @@
 from django.contrib import admin
 from cinc.models import DatosGenerales, Publicacion, Patente, SNI, SEI, PerfilDeseable, Tesis, Link, Aviso
-from cinc.models import DireccionEstancia, Premio, ActaConsejoTecnico, Evidencia, Actividad, Miscelaneo
+from cinc.models import DireccionEstancia, Premio, ActaConsejoTecnico, Evidencia, Actividad
 
 # Register your models here.
 
@@ -18,4 +18,3 @@ admin.site.register(Evidencia)
 admin.site.register(Aviso)
 admin.site.register(Actividad)
 admin.site.register(Link)
-admin.site.register(Miscelaneo)

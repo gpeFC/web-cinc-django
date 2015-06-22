@@ -30,17 +30,6 @@ class Link(models.Model):
 	def __unicode__(self):
 		return self.titulo
 
-class Miscelaneo(models.Model):
-	titulo = models.CharField(max_length=50)
-	fecha = models.DateField()
-	descripcion = models.CharField(max_length=500)
-	imagen = models.ImageField(null=True, upload_to="imagenesMiscelaneos")
-	link = models.CharField(null=True, max_length=500)
-	archivo_pdf = models.FileField(null=True, upload_to="archivosMiscelaneos")
-
-	def __unicode__(self):
-		return self.titulo
-
 class Evidencia(models.Model):
 	titulo = models.CharField(max_length=50)
 	fecha = models.DateField()
